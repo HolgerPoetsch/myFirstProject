@@ -126,3 +126,31 @@ h1, h2{
     font: 2em;
     text-align: center;
 }
+h1{
+    animation: unblur 3s 1s 2;
+}
+@keyframes unblur {
+    from {
+      text-shadow: 0 0 8px #c0c0c0;
+      }
+    to {
+      text-shadow: 0;
+    }
+  }
+  section {
+    color: #c0c0c0;
+  /*here we define what properties the transition should apply (background-colo, color
+  and font-size*/
+    transition-property: background-color color font-size;
+  /* here we define how long our transition should last*/
+    transition-duration: 2s;
+  /* here we say that our transition should start0,5 seconds after the trigger*/
+    transition-delay: 0.5s;
+  }
+  
+  /* here we define how our transition properties will change on hover*/
+  section:hover {
+    color: #00ff41;
+    font-size: 1.6rem;
+    background-color: #111111;
+  }
